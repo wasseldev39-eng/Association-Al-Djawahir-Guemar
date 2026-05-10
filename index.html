@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>جمعية الجواهر بقمار | Association Al-Djawahir Guemar</title>
+  <meta name="description" content="جمعية الجواهر بقمار جمعية خيرية وإنسانية تنشط في التبرع بالدم، سيارة الإسعاف، إعارة اللوازم الطبية، وتنمية المقاولاتية." />
+  <meta name="keywords" content="جمعية الجواهر بقمار, Association Al-Djawahir Guemar, جمعية خيرية, قمار, التبرع بالدم, سيارة الإسعاف, إعارة اللوازم الطبية" />
+  <meta property="og:title" content="جمعية الجواهر بقمار" />
+  <meta property="og:description" content="جواهر الخير… عطاء، إنقاذ، وتنمية" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_DZ" />
+  <meta property="og:image" content="https://scontent.fogx1-1.fna.fbcdn.net/v/t39.30808-6/327352070_2989580661351512_6179979542828320358_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHb9JHku7ZSuDNWpQMw8cY3iiVEWEa9k1CKJURYRr2TUH9bCAsJ_V6KYA7P9Tpl46IxYiOOBR5SiIqLUwNUmMuv&_nc_ohc=GhA_5ai33TgQ7kNvwFql6fQ&_nc_oc=AdoFC8dET5D3lvrmDp5ARYBbT8O9fehn-5vy8j9hAY3e15tET5SKFHQnC5xV4LVR74M&_nc_zt=23&_nc_ht=scontent.fogx1-1.fna&_nc_gid=ud6gxd7osaUyPb-XAy9Akg&_nc_ss=7b2a8&oh=00_Af7Q3apxQHezYgyxifuTBrL_2JSbkfEqlPCTfqgnhvSmig&oe=6A069A88" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #299E9D;
+      --primary-dark: #1F7E7D;
+      --soft-accent: #7ED6D1;
+      --highlight: #F59E0B;
+      --text: #222222;
+      --section-bg: #F5F5F5;
+      --white: #FFFFFF;
+      --muted: #666666;
+      --shadow: 0 18px 45px rgba(41, 158, 157, .18);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Kufi Arabic", system-ui, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.8;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(1180px, calc(100% - 32px)); margin: auto; }
+
+    .topbar {
+      background: var(--primary-dark);
+      color: var(--white);
+      font-size: 14px;
+      padding: 10px 0;
+    }
+    .topbar .container, .nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(41,158,157,.12);
+      padding: 14px 0;
+    }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .logo {
+      width: 62px;
+      height: 62px;
+      border-radius: 18px;
+      object-fit: cover;
+      background: var(--section-bg);
+      border: 2px solid rgba(41,158,157,.25);
+      box-shadow: var(--shadow);
+    }
+    .brand h1 { margin: 0; font-size: 18px; line-height: 1.35; }
+    .brand span { display: block; color: var(--muted); font-size: 12px; font-weight: 400; }
+    .menu { display: flex; gap: 22px; font-size: 15px; font-weight: 700; }
+    .menu a:hover { color: var(--primary); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 22px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: .25s;
+      font-family: inherit;
+    }
+    .btn-primary { background: var(--primary); color: var(--white); box-shadow: var(--shadow); }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+    .btn-outline { border: 1px solid rgba(41,158,157,.35); color: var(--primary); background: var(--white); }
+    .btn-gold { background: var(--highlight); color: var(--white); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(126,214,209,.38), transparent 30%),
+        radial-gradient(circle at 88% 20%, rgba(245,158,11,.16), transparent 28%),
+        linear-gradient(180deg, #F8FFFF 0%, #FFFFFF 100%);
+      padding: 88px 0 68px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(126,214,209,.25);
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 14px;
+    }
+    .hero h2 {
+      margin: 18px 0;
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.25;
+      letter-spacing: -1px;
+    }
+    .hero h2 span { color: var(--primary); }
+    .hero p { color: var(--muted); font-size: 18px; max-width: 620px; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+
+    .hero-card {
+      background: var(--white);
+      border-radius: 34px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(41,158,157,.12);
+    }
+    .hero-image {
+      min-height: 360px;
+      border-radius: 28px;
+      background:
+        linear-gradient(rgba(41,158,157,.16), rgba(126,214,209,.25)),
+        url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80') center/cover;
+      position: relative;
+      overflow: hidden;
+    }
+    .floating-box {
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      left: 22px;
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(10px);
+      border-radius: 22px;
+      padding: 18px;
+      display: grid;
+      gap: 8px;
+    }
+    .floating-box strong { color: var(--primary); font-size: 24px; }
+    .badge-highlight { color: var(--highlight); font-weight: 900; }
+
+    .stats { transform: translateY(-28px); position: relative; z-index: 5; }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(41,158,157,.12);
+    }
+    .stat { padding: 18px; text-align: center; border-radius: 18px; background: var(--section-bg); }
+    .stat strong { display: block; color: var(--primary); font-size: 28px; }
+    .stat span { color: var(--muted); font-size: 14px; }
+
+    section { padding: 72px 0; }
+    .section-head { text-align: center; max-width: 760px; margin: 0 auto 42px; }
+    .section-head h3 { margin: 10px 0 12px; font-size: clamp(28px, 4vw, 42px); line-height: 1.4; }
+    .section-head p { color: var(--muted); margin: 0; }
+
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(41,158,157,.12);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 10px 30px rgba(34,34,34,.06);
+      transition: .25s;
+    }
+    .card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+    .icon {
+      width: 60px; height: 60px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: rgba(126,214,209,.25);
+      color: var(--primary);
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .card:nth-child(2) .icon, .card:nth-child(5) .icon { background: rgba(245,158,11,.15); color: var(--highlight); }
+    .card h4 { margin: 0 0 10px; font-size: 21px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .about { background: var(--section-bg); }
+    .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 34px; align-items: center; }
+    .about-img {
+      min-height: 440px;
+      border-radius: 32px;
+      background: url('https://images.unsplash.com/photo-1593113630400-ea4288922497?auto=format&fit=crop&w=900&q=80') center/cover;
+      box-shadow: var(--shadow);
+    }
+    .list { display: grid; gap: 14px; margin-top: 22px; }
+    .list div {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--white);
+      padding: 14px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(41,158,157,.12);
+    }
+    .check { color: var(--highlight); font-weight: 900; }
+
+    .cta-band {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: var(--white);
+      border-radius: 36px;
+      padding: 42px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .cta-band::after {
+      content: "";
+      position: absolute;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      border: 34px solid rgba(245,158,11,.26);
+      left: -80px; top: -80px;
+    }
+    .cta-band h3 { font-size: 32px; margin: 0 0 8px; }
+    .cta-band p { margin: 0; opacity: .92; }
+    .cta-band .btn { background: var(--highlight); color: var(--white); position: relative; z-index: 1; }
+
+    .gallery { display: grid; grid-template-columns: 1.2fr .8fr .8fr; grid-auto-rows: 220px; gap: 18px; }
+    .gallery div { border-radius: 24px; background-size: cover; background-position: center; box-shadow: 0 10px 28px rgba(34,34,34,.08); }
+    .gallery div:first-child { grid-row: span 2; }
+
+    .contact { background: var(--section-bg); }
+    .contact-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 24px; }
+    .info-box, form {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(34,34,34,.06);
+      border: 1px solid rgba(41,158,157,.12);
+    }
+    .info-item { margin-bottom: 18px; }
+    .info-item strong { display: block; color: var(--primary); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    input, textarea {
+      width: 100%;
+      border: 1px solid rgba(34,34,34,.12);
+      border-radius: 16px;
+      padding: 14px 16px;
+      font-family: inherit;
+      outline: none;
+      margin-bottom: 14px;
+      background: #FBFBFB;
+    }
+    textarea { min-height: 150px; resize: vertical; }
+    input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(126,214,209,.24); }
+
+    footer { background: #162121; color: var(--white); padding: 42px 0 18px; }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr .8fr .8fr; gap: 28px; margin-bottom: 26px; }
+    footer p, footer a { color: rgba(255,255,255,.78); }
+    footer h4 { margin-top: 0; }
+    .copyright { border-top: 1px solid rgba(255,255,255,.12); padding-top: 18px; text-align: center; color: rgba(255,255,255,.65); font-size: 14px; }
+
+
+    .highlight-icons-section { background: var(--white); padding: 42px 0 24px; }
+    .highlight-icons-title {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--text);
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+    .highlight-icons-title small { color: var(--muted); font-weight: 700; }
+    .highlight-icons {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .highlight-link {
+      display: grid;
+      place-items: center;
+      gap: 10px;
+      text-align: center;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .highlight-circle {
+      width: 78px;
+      height: 78px;
+      border: 2px solid rgba(41,158,157,.45);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--white);
+      transition: .25s;
+    }
+    .highlight-circle svg {
+      width: 42px;
+      height: 42px;
+      fill: none;
+      stroke: var(--primary-dark);
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .highlight-link:hover .highlight-circle {
+      transform: translateY(-4px);
+      background: rgba(126,214,209,.16);
+      box-shadow: var(--shadow);
+    }
+    .icon svg {
+      width: 34px;
+      height: 34px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .icon-pages { background: var(--section-bg); }
+    .icon-page-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    .icon-page-card {
+      background: var(--white);
+      border: 1px solid rgba(41,158,157,.12);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(34,34,34,.06);
+      scroll-margin-top: 120px;
+    }
+    .icon-page-card .highlight-circle { margin-bottom: 14px; }
+    .icon-page-card h4 { margin: 0 0 8px; font-size: 24px; color: var(--primary-dark); }
+    .icon-page-card p { color: var(--muted); margin: 0 0 14px; }
+    .icon-page-card ul { margin: 0; padding-right: 20px; color: var(--text); }
+
+
+    .highlight-icons-wrap {
+      position: relative;
+    }
+    .highlight-icons-wrap::before,
+    .highlight-icons-wrap::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 34px;
+      pointer-events: none;
+      z-index: 2;
+      opacity: 0;
+      transition: .25s;
+    }
+    .highlight-icons-wrap::before {
+      right: 0;
+      background: linear-gradient(to left, var(--white), transparent);
+    }
+    .highlight-icons-wrap::after {
+      left: 0;
+      background: linear-gradient(to right, var(--white), transparent);
+    }
+    .highlight-icons-wrap.is-scrollable::before,
+    .highlight-icons-wrap.is-scrollable::after { opacity: 1; }
+    .highlight-icons.is-dragging {
+      cursor: grabbing;
+      user-select: none;
+      scroll-behavior: auto;
+    }
+    .highlight-icons.is-dragging .highlight-link { pointer-events: none; }
+
+    .icon-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+    }
+    .icon-modal.is-open { display: flex; }
+    .icon-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(22, 33, 33, .58);
+      backdrop-filter: blur(5px);
+    }
+    .icon-modal-dialog {
+      position: relative;
+      width: min(620px, 100%);
+      max-height: min(86vh, 760px);
+      overflow: auto;
+      background: var(--white);
+      border-radius: 30px;
+      padding: 28px;
+      box-shadow: 0 28px 80px rgba(0, 0, 0, .28);
+      border: 1px solid rgba(41,158,157,.16);
+      animation: modalIn .22s ease-out;
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(18px) scale(.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .icon-modal-close {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 42px;
+      height: 42px;
+      border: 0;
+      border-radius: 50%;
+      background: rgba(41,158,157,.10);
+      color: var(--primary-dark);
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+      font-family: inherit;
+      transition: .2s;
+    }
+    .icon-modal-close:hover { background: rgba(245,158,11,.18); color: var(--highlight); }
+    .icon-modal-body .highlight-circle { margin-bottom: 14px; }
+    .icon-modal-body h4 { margin: 0 0 8px; font-size: 26px; color: var(--primary-dark); }
+    .icon-modal-body p { color: var(--muted); margin: 0 0 14px; }
+    .icon-modal-body ul { margin: 0; padding-right: 20px; color: var(--text); }
+    body.modal-open { overflow: hidden; }
+    @media (max-width: 900px) {
+      .highlight-icons-wrap {
+        overflow: hidden;
+        margin-inline: -16px;
+        padding-inline: 16px;
+      }
+      .highlight-icons {
+        display: flex;
+        gap: 14px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 6px 4px 14px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        cursor: grab;
+      }
+      .highlight-icons::-webkit-scrollbar { height: 6px; }
+      .highlight-icons::-webkit-scrollbar-thumb { background: rgba(41,158,157,.32); border-radius: 999px; }
+      .highlight-link {
+        min-width: 104px;
+        scroll-snap-align: start;
+      }
+      .highlight-circle { width: 76px; height: 76px; }
+      .icon-page-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .highlight-icons-section { padding-top: 30px; }
+      .highlight-icons-title { padding-inline: 4px; }
+      .highlight-link { min-width: 96px; }
+      .icon-modal-dialog { padding: 24px 20px; border-radius: 24px; }
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .about-grid, .contact-grid, .cta-band, .footer-grid { grid-template-columns: 1fr; }
+      .stats-grid, .cards { grid-template-columns: repeat(2, 1fr); }
+      .gallery { grid-template-columns: 1fr; grid-auto-rows: 240px; }
+      .gallery div:first-child { grid-row: span 1; }
+      .menu { display: none; }
+    }
+    @media (max-width: 560px) {
+      .stats-grid, .cards, .form-row { grid-template-columns: 1fr; }
+      .hero { padding-top: 54px; }
+      .hero-card { padding: 14px; }
+      .cta-band { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="i-about" viewBox="0 0 64 64">
+      <circle cx="24" cy="20" r="8"/><path d="M11 45c1-10 7-17 13-17s12 7 13 17"/>
+      <circle cx="42" cy="23" r="7"/><path d="M33 45c1-8 6-14 11-14 4 0 8 3 10 8"/>
+      <circle cx="14" cy="25" r="6"/><path d="M6 43c1-7 5-12 10-12"/>
+    </symbol>
+    <symbol id="i-projects" viewBox="0 0 64 64">
+      <path d="M10 28 32 15l22 13"/><path d="M14 28v23h36V28"/>
+      <path d="M22 51V36h20v15"/><path d="M24 30h6M34 30h6"/>
+      <path d="M19 21V13h10v3"/>
+    </symbol>
+    <symbol id="i-experts" viewBox="0 0 64 64">
+      <path d="M16 54V12h28v42"/><path d="M44 25h8v29"/><path d="M22 20h6M33 20h6M22 29h6M33 29h6M22 38h6M33 38h6"/><path d="M26 54V44h8v10"/>
+    </symbol>
+    <symbol id="i-services" viewBox="0 0 64 64">
+      <circle cx="22" cy="22" r="7"/><circle cx="42" cy="22" r="7"/><circle cx="32" cy="15" r="7"/>
+      <path d="M13 45c1-9 5-15 11-15"/><path d="M51 45c-1-9-5-15-11-15"/><path d="M20 49c2-10 7-16 12-16s10 6 12 16"/>
+      <path d="M14 49h36"/>
+    </symbol>
+    <symbol id="i-achievements" viewBox="0 0 64 64">
+      <path d="M24 45h16"/><path d="M28 54h8"/><path d="M32 45v-8"/>
+      <path d="M22 24a10 10 0 1 1 20 0c0 5-3 8-6 11H28c-3-3-6-6-6-11Z"/>
+      <path d="M16 24h-5M53 24h-5M20 13l-4-4M44 13l4-4"/>
+      <path d="M26 35h12"/>
+    </symbol>
+    <symbol id="i-volunteer" viewBox="0 0 64 64">
+      <circle cx="34" cy="15" r="7"/><path d="M26 27h16l5 13"/><path d="M27 27 21 42l-7-4"/><path d="M42 28l8 8 6-5"/>
+      <path d="M19 48c6-7 12-8 18-4 5 3 9 3 15-2"/><path d="M12 53c7-4 14-4 21 0 6 3 12 3 19-1"/>
+    </symbol>
+    <symbol id="i-partners" viewBox="0 0 64 64">
+      <path d="M24 34 14 44c-3 3-7-1-4-4l10-10"/><path d="M40 34l10 10c3 3 7-1 4-4L44 30"/>
+      <path d="M21 31l8-8 7 7 5-5 7 7"/><path d="M29 23c-5-5-10-5-15 0l-4 4"/><path d="M35 25c5-5 10-5 15 0l4 4"/>
+      <path d="M25 42l4 4M32 39l4 4M39 36l4 4"/>
+    </symbol>
+    <symbol id="i-donate" viewBox="0 0 64 64">
+      <circle cx="28" cy="28" r="16"/><path d="M40 40 54 54"/><path d="M28 18v20M18 28h20"/>
+    </symbol>
+    <symbol id="i-blood" viewBox="0 0 64 64"><path d="M32 8s16 18 16 32a16 16 0 0 1-32 0C16 26 32 8 32 8Z"/><path d="M32 30v16M24 38h16"/></symbol>
+    <symbol id="i-ambulance" viewBox="0 0 64 64"><path d="M8 38h6l6-14h18l7 8h9v18H8Z"/><path d="M24 30h10M29 25v10"/><circle cx="20" cy="50" r="5"/><circle cx="46" cy="50" r="5"/></symbol>
+    <symbol id="i-medical" viewBox="0 0 64 64"><path d="M22 18v22h19a9 9 0 0 1 9 9"/><circle cx="22" cy="14" r="6"/><path d="M22 40h20"/><circle cx="22" cy="50" r="5"/><circle cx="50" cy="50" r="5"/></symbol>
+  </svg>
+
+  <div class="topbar">
+    <div class="container">
+      <a href="tel:+21332233730">الهاتف: 032233730</a>
+      <a href="mailto:associationdjawahir@gmail.com">البريد الإلكتروني: associationdjawahir@gmail.com</a>
+      <a href="https://www.facebook.com/profile.php?id=100077249114611" target="_blank" rel="noopener">صفحتنا على فيسبوك</a>
+    </div>
+  </div>
+
+  <header class="nav">
+    <div class="container">
+      <a href="#home" class="brand" aria-label="جمعية الجواهر بقمار">
+        <img class="logo" src="https://scontent.fogx1-1.fna.fbcdn.net/v/t39.30808-6/327352070_2989580661351512_6179979542828320358_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeHb9JHku7ZSuDNWpQMw8cY3iiVEWEa9k1CKJURYRr2TUH9bCAsJ_V6KYA7P9Tpl46IxYiOOBR5SiIqLUwNUmMuv&_nc_ohc=GhA_5ai33TgQ7kNvwFql6fQ&_nc_oc=AdoFC8dET5D3lvrmDp5ARYBbT8O9fehn-5vy8j9hAY3e15tET5SKFHQnC5xV4LVR74M&_nc_zt=23&_nc_ht=scontent.fogx1-1.fna&_nc_gid=ud6gxd7osaUyPb-XAy9Akg&_nc_ss=7b2a8&oh=00_Af7Q3apxQHezYgyxifuTBrL_2JSbkfEqlPCTfqgnhvSmig&oe=6A069A88" alt="شعار جمعية الجواهر بقمار" />
+        <h1>جمعية الجواهر بقمار <span>Association Al-Djawahir Guemar</span></h1>
+      </a>
+      <nav class="menu" aria-label="القائمة الرئيسية">
+        <a href="#home">الرئيسية</a>
+        <a href="#about">عن الجمعية</a>
+        <a href="#activities">أنشطتنا</a>
+        <a href="#icon-pages">الأيقونات</a>
+        <a href="#gallery">المعرض</a>
+        <a href="#contact">اتصل بنا</a>
+      </nav>
+      <a class="btn btn-primary" href="#contact">ساهم معنا</a>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">جواهر الخير… عطاء، إنقاذ، وتنمية</span>
+          <h2>يدٌ تمتد بالعطاء وقلبٌ ينبض <span>بالخير</span></h2>
+          <p>
+            جمعية الجواهر بقمار جمعية خيرية وإنسانية تعمل على خدمة المجتمع عبر مختلف الأنشطة الخيرية:
+            التبرع بالدم، سيارة الإسعاف، إعارة اللوازم الطبية، دعم المحتاجين، وتنمية المقاولاتية.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="tel:+21332233730">اتصل الآن</a>
+            <a class="btn btn-outline" href="#activities">اكتشف الأنشطة</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-image">
+            <div class="floating-box">
+              <strong>جمعية الجواهر بقمار</strong>
+              <span>نرافق المحتاج، نساند المريض، ونخدم المجتمع. <b class="badge-highlight">معًا نصنع الأثر.</b></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="stats">
+      <div class="container stats-grid">
+        <div class="stat"><strong>24/7</strong><span>روح التضامن</span></div>
+        <div class="stat"><strong>+100</strong><span>مبادرة خيرية</span></div>
+        <div class="stat"><strong>+50</strong><span>متطوع ومتطوعة</span></div>
+        <div class="stat"><strong>100%</strong><span>خدمة إنسانية</span></div>
+      </div>
+    </div>
+
+
+    <section class="highlight-icons-section" aria-label="أيقونات مميزة">
+      <div class="container">
+        <div class="highlight-icons-title">HIGHLIGHT ICONS <small>الأيقونات المميزة</small></div>
+        <div class="highlight-icons-wrap" aria-label="اسحب يمينًا أو يسارًا لمشاهدة كل الأيقونات">
+          <div class="highlight-icons">
+            <a class="highlight-link" href="#icon-about" data-modal-target="icon-about"><span class="highlight-circle"><svg><use href="#i-about"></use></svg></span><span>من نحن</span></a>
+            <a class="highlight-link" href="#icon-projects" data-modal-target="icon-projects"><span class="highlight-circle"><svg><use href="#i-projects"></use></svg></span><span>مشاريعنا</span></a>
+            <a class="highlight-link" href="#icon-experts" data-modal-target="icon-experts"><span class="highlight-circle"><svg><use href="#i-experts"></use></svg></span><span>الخبراء</span></a>
+            <a class="highlight-link" href="#icon-services" data-modal-target="icon-services"><span class="highlight-circle"><svg><use href="#i-services"></use></svg></span><span>خدمات</span></a>
+            <a class="highlight-link" href="#icon-achievements" data-modal-target="icon-achievements"><span class="highlight-circle"><svg><use href="#i-achievements"></use></svg></span><span>إنجازات</span></a>
+            <a class="highlight-link" href="#icon-volunteer" data-modal-target="icon-volunteer"><span class="highlight-circle"><svg><use href="#i-volunteer"></use></svg></span><span>تطوع</span></a>
+            <a class="highlight-link" href="#icon-partners" data-modal-target="icon-partners"><span class="highlight-circle"><svg><use href="#i-partners"></use></svg></span><span>شركاؤنا</span></a>
+            <a class="highlight-link" href="#icon-donate" data-modal-target="icon-donate"><span class="highlight-circle"><svg><use href="#i-donate"></use></svg></span><span>تبرع</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activities">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">أنشطتنا الخيرية</span>
+          <h3>مجالات عمل الجمعية</h3>
+          <p>نفتح أبواب الخير في كل المجالات التي تخدم الإنسان والمجتمع.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="icon"><svg><use href="#i-blood"></use></svg></div><h4>التبرع بالدم</h4><p>تنظيم حملات التبرع بالدم ونشر ثقافة إنقاذ الأرواح بالتعاون مع الجهات المختصة.</p></article>
+          <article class="card"><div class="icon"><svg><use href="#i-ambulance"></use></svg></div><h4>سيارة الإسعاف</h4><p>خدمة موجهة لمرافقة الحالات الصحية وتسهيل النقل عند الحاجة وفق الإمكانيات المتاحة.</p></article>
+          <article class="card"><div class="icon"><svg><use href="#i-medical"></use></svg></div><h4>إعارة اللوازم الطبية</h4><p>توفير وإعارة كراسٍ متحركة، عكازات، وأسرة طبية لمساعدة المرضى والمحتاجين.</p></article>
+          <article class="card"><div class="icon"><svg><use href="#i-partners"></use></svg></div><h4>المساعدات الاجتماعية</h4><p>دعم العائلات المحتاجة والمساهمة في تخفيف الأعباء المعيشية عبر مبادرات تضامنية.</p></article>
+          <article class="card"><div class="icon"><svg><use href="#i-projects"></use></svg></div><h4>تنمية المقاولاتية</h4><p>تشجيع المبادرات الشبابية وروح الاعتماد على النفس وبناء مشاريع نافعة للمجتمع.</p></article>
+          <article class="card"><div class="icon"><svg><use href="#i-achievements"></use></svg></div><h4>كل أبواب الخير</h4><p>أنشطة خيرية متنوعة حسب احتياجات المجتمع: حملات، زيارات، دعم، توعية، ومرافقة.</p></article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="icon-pages" id="icon-pages">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">صفحات الأيقونات</span>
+          <h3>صفحة مخصصة لكل أيقونة</h3>
+          <p>كل أيقونة في الشريط العلوي تقود إلى هذا الجزء المخصص لها داخل نفس ملف HTML.</p>
+        </div>
+        <div class="icon-page-grid">
+          <article class="icon-page-card" id="icon-about">
+            <span class="highlight-circle"><svg><use href="#i-about"></use></svg></span>
+            <h4>من نحن</h4>
+            <p>تعريف مختصر بجمعية الجواهر بقمار ورسالتها الإنسانية في خدمة المجتمع.</p>
+            <ul><li>العمل الخيري والإنساني دون تمييز.</li><li>نشر ثقافة التطوع والتكافل.</li><li>مرافقة المرضى والمحتاجين.</li></ul>
+          </article>
+          <article class="icon-page-card" id="icon-projects">
+            <span class="highlight-circle"><svg><use href="#i-projects"></use></svg></span>
+            <h4>مشاريعنا</h4>
+            <p>عرض المشاريع والمبادرات التي تعمل الجمعية على تنفيذها أو دعمها.</p>
+            <ul><li>حملات صحية وتوعوية.</li><li>مبادرات اجتماعية تضامنية.</li><li>برامج لدعم الشباب والمقاولاتية.</li></ul>
+          </article>
+          <article class="icon-page-card" id="icon-experts">
+            <span class="highlight-circle"><svg><use href="#i-experts"></use></svg></span>
+            <h4>الخبراء</h4>
+            <p>مساحة للتعريف بالمساهمين وأصحاب الخبرة الذين يدعمون أعمال الجمعية.</p>
+            <ul><li>خبرات طبية واجتماعية.</li><li>مرافقة وتوجيه للمبادرات.</li><li>استشارات تطوعية لخدمة المجتمع.</li></ul>
+          </article>
+          <article class="icon-page-card" id="icon-services">
+            <span class="highlight-circle"><svg><use href="#i-services"></use></svg></span>
+            <h4>خدمات</h4>
+            <p>الخدمات الأساسية التي تقدمها الجمعية حسب الإمكانيات المتوفرة.</p>
+            <ul><li>إعارة اللوازم الطبية.</li><li>خدمة الإسعاف والمرافقة.</li><li>الدعم الاجتماعي والتوعوي.</li></ul>
+          </article>
+          <article class="icon-page-card" id="icon-achievements">
+            <span class="highlight-circle"><svg><use href="#i-achievements"></use></svg></span>
+            <h4>إنجازات</h4>
+            <p>توثيق أهم الإنجازات والمبادرات التي صنعت أثرًا إيجابيًا.</p>
+            <ul><li>حملات تبرع بالدم.</li><li>مبادرات تضامنية للعائلات.</li><li>أنشطة ميدانية وتوعوية.</li></ul>
+          </article>
+          <article class="icon-page-card" id="icon-volunteer">
+            <span class="highlight-circle"><svg><use href="#i-volunteer"></use></svg></span>
+            <h4>تطوع</h4>
+            <p>باب مفتوح للراغبين في تقديم وقتهم وجهدهم لخدمة الآخرين.</p>
+            <ul><li>المشاركة في الحملات.</li><li>المساعدة في التنظيم والتواصل.</li><li>اقتراح مبادرات خيرية جديدة.</li></ul>
+          </article>
+          <article class="icon-page-card" id="icon-partners">
+            <span class="highlight-circle"><svg><use href="#i-partners"></use></svg></span>
+            <h4>شركاؤنا</h4>
+            <p>مساحة لعرض الشركاء والداعمين الذين يساهمون في نجاح المبادرات.</p>
+            <ul><li>هيئات ومؤسسات محلية.</li><li>محسنون وداعمون.</li><li>فرق تطوعية ومجتمعية.</li></ul>
+          </article>
+          <article class="icon-page-card" id="icon-donate">
+            <span class="highlight-circle"><svg><use href="#i-donate"></use></svg></span>
+            <h4>تبرع</h4>
+            <p>كل تبرع يساعد الجمعية على مواصلة تقديم الدعم والخدمات للمحتاجين.</p>
+            <ul><li>دعم الحملات الخيرية.</li><li>المساهمة في اللوازم الطبية.</li><li>التواصل مع الجمعية لمعرفة طرق التبرع.</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-img" aria-label="عمل خيري"></div>
+        <div>
+          <span class="eyebrow">من نحن</span>
+          <h3>جمعية محلية بروح إنسانية واسعة</h3>
+          <p>
+            نسعى في جمعية الجواهر بقمار إلى بناء أثر اجتماعي حقيقي قائم على التضامن، الشفافية،
+            والعمل التطوعي، من خلال مبادرات عملية تخدم المرضى، المحتاجين، الشباب، والعائلات.
+          </p>
+          <div class="list">
+            <div><span class="check">✓</span> العمل الخيري والإنساني دون تمييز</div>
+            <div><span class="check">✓</span> خدمة المرضى والمحتاجين ومرافقتهم</div>
+            <div><span class="check">✓</span> نشر ثقافة التطوع والتكافل الاجتماعي</div>
+            <div><span class="check">✓</span> دعم الشباب والمبادرات المقاولاتية</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <div>
+            <h3>ساهم معنا في صناعة الأثر</h3>
+            <p>كل مساهمة، مهما كانت بسيطة، قد تكون سببًا في إنقاذ حياة أو تخفيف معاناة.</p>
+          </div>
+          <a class="btn" href="https://www.facebook.com/profile.php?id=100077249114611" target="_blank" rel="noopener">تابعنا على فيسبوك</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">الجواهر في صور</span>
+          <h3>معرض الأنشطة</h3>
+          <p>صور أتشطة الجمعية الرسمية و حملاتنا.</p>
+        </div>
+        <div class="gallery">
+          <div style="background-image:url('https://scontent.fogx1-2.fna.fbcdn.net/v/t39.30808-6/485959338_668510865733878_8836431636439691783_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeF4FQQYUFcAPnXgXKx76u_jnxRiN57ZjVKfFGI3ntmNUkR6tYCkGXJiFazIBI9MzWg9bSQq7LvE5lkEentbRQhD&_nc_ohc=JBpi8xTdcUwQ7kNvwEwwV89&_nc_oc=AdpjOfvmThhAy4TpltZxXs3dADXibQHCQF4NueA2zJbiNfhqxfCfawxnlNEIn-m_tNE&_nc_zt=23&_nc_ht=scontent.fogx1-2.fna&_nc_gid=DQiItbXKWHdJ-LMwUCiEjw&_nc_ss=7b2a8&oh=00_Af7RVNOiP9LVrj6TAzbCDoVYOHMGqh-yVhap5U2MhXbAgw&oe=6A06BC4A')"></div>
+          <div style="background-image:url('https://scontent.fogx1-1.fna.fbcdn.net/v/t39.30808-6/473705409_620409750543990_4557311325318208016_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeGPkoywIWx6Hi7x3mdVyyYJD5riWMtB3ZIPmuJYy0HdknIlTwt87i5zWlzl_ff6A2XOJmD7KqUojYr04xE4Qju_&_nc_ohc=F6DpSLZZLy4Q7kNvwEtKUx5&_nc_oc=AdpnKyrPf40CH1h8FtPRrr1XKmj11rYvD8EFhLwwutchAm1kT5DLE5uioEOD-mJavug&_nc_zt=23&_nc_ht=scontent.fogx1-1.fna&_nc_gid=0kJzYiRo8wQMCHaStxBL_w&_nc_ss=7b2a8&oh=00_Af4RJN4vMcRdkX4gZwarvzjWxlnQWw6GQeLnBsb-aD0SGQ&oe=6A06BDDA')"></div>
+          <div style="background-image:url('https://scontent.fogx1-2.fna.fbcdn.net/v/t1.6435-9/198038333_1155431458294710_4449020051549026603_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeFmGiT0Oaz3up6tddpuiwQ4qrytavZSMteqvK1q9lIy14pqGFLBbiuBIElV7AKd7x4I_2Vz3Zl5ruXI5YHGw3n0&_nc_ohc=j0JtgUwgKbgQ7kNvwE1yZEr&_nc_oc=AdovqU_-KZZBbESSPQSLT8B6RfBXCdAaapaqLgBkDdPhUSNljz4Tw1QEijgiXpqjsA8&_nc_zt=23&_nc_ht=scontent.fogx1-2.fna&_nc_gid=SrgIwvL1S8-asoRQUE77cQ&_nc_ss=7b2a8&oh=00_Af5Ain3SNo1IKtB-_xgOPBrO1zfszf1rEb1c7ZdJbYKgvQ&oe=6A284E5B')"></div>
+          <div style="background-image:url('https://scontent.fogx1-1.fna.fbcdn.net/v/t39.30808-6/477034286_639604325291199_2370256134076117147_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeEcUnjfPQC3MxJ86uPgAU1bTJ6u3WymGGJMnq7dbKYYYhOB4G9PQPtctbD75NSFYXTFJ_McMV4Q1ILVnJU5yIHm&_nc_ohc=8WBF5n8SOn8Q7kNvwH2MwBj&_nc_oc=Adp7nxeYleGDam8Kf3ASeabP5IveTGnzIj6YXE5SE1dKBAdKHXR2_dYcNciOg068iUI&_nc_zt=23&_nc_ht=scontent.fogx1-1.fna&_nc_gid=uFpVaRCZX7dE4XWauJMyBg&_nc_ss=7b2a8&oh=00_Af54a-ilsfqhUbrKx1Cf4x1JcJpKz-eGpZGTLYsUjhzlpQ&oe=6A06A4D0')"></div>
+          <div style="background-image:url('https://scontent.fogx1-1.fna.fbcdn.net/v/t1.6435-9/161459045_1103535276817662_4129431740298835993_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeEvbtOl_IYsf4LWMlrEJeXhqt3sIXVNpBOq3ewhdU2kE6J__kE3L0PyXFjW5Fik4X6hBEE4bjldA3mIWIF-Vs5W&_nc_ohc=mKCdtgwXYToQ7kNvwF5eyaG&_nc_oc=Adrcsr9GkXLMPDRvwn6dlG9RFIIrdbNyPsV9BgTcE0D556ZhnrrH2vsZunwpsKsoOe0&_nc_zt=23&_nc_ht=scontent.fogx1-1.fna&_nc_gid=DdhgH51aLZ58JXysRC_6AQ&_nc_ss=7b2a8&oh=00_Af7v-h0EzEqzL8FN6C2T-9f4slIfiGCtfAuo1lVmDA0IFA&oe=6A2835C0')"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">اتصل بنا</span>
+          <h3>نحن في خدمتكم</h3>
+          <p>للتطوع، التبرع، طلب المساعدة، أو الاستفسار عن أنشطة الجمعية.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="info-box">
+            <div class="info-item"><strong>الهاتف</strong><a href="tel:+21332233730">032233730</a></div>
+            <div class="info-item"><strong>البريد الإلكتروني</strong><a href="mailto:associationdjawahir@gmail.com">associationdjawahir@gmail.com</a></div>
+            <div class="info-item"><strong>فيسبوك</strong><a href="https://www.facebook.com/profile.php?id=100077249114611" target="_blank" rel="noopener">Association Al-Djawahir Guemar</a></div>
+            <div class="info-item"><strong>الموقع</strong><span>قمار، الجزائر</span></div>
+            <div class="info-item"><strong>الشعار</strong><span>جواهر الخير… عطاء، إنقاذ، وتنمية</span></div>
+          </div>
+          <form action="mailto:associationdjawahir@gmail.com" method="post" enctype="text/plain">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="الاسم الكامل" required />
+              <input type="tel" name="phone" placeholder="رقم الهاتف" required />
+            </div>
+            <input type="email" name="email" placeholder="البريد الإلكتروني" />
+            <input type="text" name="subject" placeholder="الموضوع" />
+            <textarea name="message" placeholder="اكتب رسالتك هنا..."></textarea>
+            <button class="btn btn-primary" type="submit">إرسال الرسالة</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <div class="icon-modal" id="iconModal" aria-hidden="true">
+    <div class="icon-modal-backdrop" data-modal-close></div>
+    <div class="icon-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="iconModalTitle" tabindex="-1">
+      <button class="icon-modal-close" type="button" aria-label="إغلاق النافذة" data-modal-close>×</button>
+      <div class="icon-modal-body" id="iconModalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><h4>جمعية الجواهر بقمار</h4><p>جمعية خيرية وإنسانية لخدمة المجتمع عبر مبادرات التضامن، الصحة، التوعية، والتنمية.</p></div>
+      <div><h4>روابط سريعة</h4><p><a href="#about">عن الجمعية</a></p><p><a href="#activities">أنشطتنا</a></p><p><a href="#contact">اتصل بنا</a></p></div>
+      <div><h4>تواصل معنا</h4><p><a href="tel:+21332233730">032233730</a></p><p><a href="mailto:associationdjawahir@gmail.com">associationdjawahir@gmail.com</a></p><p><a href="https://www.facebook.com/profile.php?id=100077249114611" target="_blank" rel="noopener">Facebook</a></p></div>
+    </div>
+    <div class="container copyright">جميع الحقوق محفوظة © جمعية الجواهر بقمار <span id="year"></span></div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const iconScroller = document.querySelector('.highlight-icons');
+    const iconScrollerWrap = document.querySelector('.highlight-icons-wrap');
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let dragMoved = false;
+
+    function updateScrollableHint() {
+      if (!iconScroller || !iconScrollerWrap) return;
+      iconScrollerWrap.classList.toggle('is-scrollable', iconScroller.scrollWidth > iconScroller.clientWidth + 4);
+    }
+
+    if (iconScroller) {
+      updateScrollableHint();
+      window.addEventListener('resize', updateScrollableHint);
+
+      iconScroller.addEventListener('pointerdown', (event) => {
+        isDown = true;
+        dragMoved = false;
+        startX = event.clientX;
+        scrollLeft = iconScroller.scrollLeft;
+        iconScroller.classList.add('is-dragging');
+        iconScroller.setPointerCapture(event.pointerId);
+      });
+
+      iconScroller.addEventListener('pointermove', (event) => {
+        if (!isDown) return;
+        const walk = event.clientX - startX;
+        if (Math.abs(walk) > 5) dragMoved = true;
+        iconScroller.scrollLeft = scrollLeft - walk;
+      });
+
+      ['pointerup', 'pointercancel', 'pointerleave'].forEach((eventName) => {
+        iconScroller.addEventListener(eventName, () => {
+          isDown = false;
+          iconScroller.classList.remove('is-dragging');
+        });
+      });
+    }
+
+    const modal = document.getElementById('iconModal');
+    const modalDialog = modal?.querySelector('.icon-modal-dialog');
+    const modalBody = document.getElementById('iconModalBody');
+    let lastFocusedElement = null;
+
+    function openIconModal(cardId) {
+      const sourceCard = document.getElementById(cardId);
+      if (!sourceCard || !modal || !modalBody || !modalDialog) return;
+
+      lastFocusedElement = document.activeElement;
+      modalBody.innerHTML = sourceCard.innerHTML;
+      const title = modalBody.querySelector('h4');
+      if (title) title.id = 'iconModalTitle';
+
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      modalDialog.focus();
+    }
+
+    function closeIconModal() {
+      if (!modal) return;
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      modalBody.innerHTML = '';
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+
+    document.querySelectorAll('[data-modal-target]').forEach((link) => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (dragMoved) return;
+        openIconModal(link.dataset.modalTarget);
+      });
+    });
+
+    document.querySelectorAll('[data-modal-close]').forEach((element) => {
+      element.addEventListener('click', closeIconModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && modal?.classList.contains('is-open')) closeIconModal();
+    });
+  </script>
+</body>
+</html>
+
+
+
